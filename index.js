@@ -18,7 +18,7 @@ const changeButtonFunction = async () => {
         const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=inspirational', {
             method: 'GET',
             headers: {
-                'X-Api-Key': 'lAWcZvHSsVQv9ADO/N223g==bshF7EBIL1ikh6Hz' // Replace with your actual API key
+                'X-Api-Key': 'lAWcZvHSsVQv9ADO/N223g==bshF7EBIL1ikh6Hz' 
             }
         });
 
@@ -29,8 +29,8 @@ const changeButtonFunction = async () => {
         const data = await response.json();
 
         // Set the quote and author correctly
-        quoteParagraph.textContent = data[0].quote;  // Use the 'quote' property from the API response
-        authorSpan.textContent = data[0].author ? `— ${data[0].author}` : '— Unknown';  // Use the 'author' property
+        quoteParagraph.textContent = data[0].quote;  
+        authorSpan.textContent = data[0].author ? `— ${data[0].author}` : '— Unknown';  
         
         document.documentElement.style.setProperty('--main-bg-color', randomColorGenerator());
     } catch (error) {
